@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  /* Fond simple premium: marbre clair */
+  background-color: #FBF9F6;
+  background-image: url("/images/marble-bg.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #2B2A2A;
+  margin: 0;
+  overflow-x: hidden;
+  position: relative;
+  font-family: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Police élégante mais subtile pour les noms */
+.font-elegant {
+  font-family: "Bodoni Moda", ui-serif, Georgia, serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  font-style: normal;
+  text-rendering: geometricPrecision;
+}
+
+/* Optimisation scroll fluide */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Optimisation images de fond */
+.hero-bg {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+}
+
+@media (max-width: 767px) {
+  .hero-bg {
+    background-attachment: scroll !important;
+  }
+}
